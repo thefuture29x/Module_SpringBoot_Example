@@ -1,0 +1,154 @@
+header{
+	width: 95%;
+	height: 60px;
+	margin: 0 auto;
+	background-color: pink;
+	display: flex;
+}
+header .header-logo{
+	margin-left: 15px;
+	height: 100%;
+	border-radius: 50%;
+}
+header nav ul{
+	margin: 0 auto;
+	display: flex;
+	height: 100%;
+	margin-left: 200px;
+}
+header nav ul li{
+	border-left: 1px solid white;
+	list-style: none;
+	width: 100px;
+}
+header nav ul li:hover{
+	background-color: white;
+}
+header nav ul li a{ 
+	margin-left: 20px;
+	text-decoration: none;
+	color: black;
+	line-height: 60px;
+}
+header .Search{
+	margin: 0 auto;
+	line-height: 60px;
+    padding-left: 100px;
+}
+.content{
+	width: 85%;
+	height: 400px;
+	margin: 0 auto;
+	padding: 10px;
+	display: flex;
+	margin-bottom: 50px;
+}
+.content-left{
+	width: 65%;
+	height: 100%; 
+	margin-right: 5px;
+}
+.content-left img{
+	width: 100%;
+	height: 100%;
+}
+.content-right{
+	width: 33%;
+	height: 100%; 
+	margin-left: 5px;
+}
+.content-right img{
+	width: 100%;
+	height: 49%;
+	margin-bottom: 5px;
+}
+.content-2{
+	margin: 0 auto;
+	width: 85%;
+}
+.content-2 img{
+	width: 24%;
+	height: 49%;
+	margin: 3px;
+} 
+.content-3 ul{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.content-3 ul li{
+	width: 24%;
+	height: 200px;
+	margin: 2px;
+}
+.content-3 ul li img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	
+}
+.content-4{
+	width: 30%;
+	display: flex;
+	position: relative;
+	background-color: pink;
+}
+.content-4 img{
+	width: 25px;
+	height: 25px;
+	margin-bottom: auto;
+	margin-top: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.content-4 p{
+	position: relative;
+	margin-right: 15px;
+}
+.content-4 p time{
+	position: absolute;
+	font-size: 10px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.pagination{
+	position: relative;
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+.pagination a{
+	float: left;
+	text-decoration: none;
+	padding: 12px 18px;
+}
+
+footer{
+	text-align: center;
+    margin-top: 50px;
+    padding: 3px;
+    background-color: pink;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

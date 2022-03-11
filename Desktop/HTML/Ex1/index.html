@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ex1_02</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="Ex1_images/logo.jpg" class="header-logo">
+		</div>
+		<nav>
+			<ul>
+				<li>
+					<a href="">All</a>
+				</li>
+				<li>
+					<a href="">Animal</a>
+				</li>
+				<li>
+					<a href="">Nature</a>
+				</li>
+				<li>
+					<a href="">Mountant</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="Search">
+			<input type="text" name="" placeholder="Enter image name">
+			<button >Search</button>
+		</div>
+	</header>
+	<div class="content">
+		<div class="content-left">
+			<img src="Ex1_images/logo.jpg" id="image">
+			<button onclick="prev()"><</button>
+			<button onclick="next()">></button>
+		</div>
+		<div class="content-right">
+			<img src="Ex1_images/logo.jpg">
+			<img src="Ex1_images/logo.jpg">
+		</div>
+
+	</div>
+	<div class="content-2">
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+		<img src="Ex1_images/logo.jpg" >
+	</div>
+	<div class="content-3">
+		<ul>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+			<li>
+				<img src="Ex1_images/logo.jpg" >
+			</li>
+
+
+		</ul>
+	</div>
+	<div class="content-4">
+		<img src="Ex1_images/logo.jpg" >
+		<p>Trong Java, mọi thứ đều là một Object. Java có thể dễ dàng mở rộng và bảo trì vì nó được xây dựng dựa trên mô hình Object.
+			<time>2 days ago</time>
+		</p>
+	</div>
+	<div class="pagination">
+		<a href=""><<</a>
+		<a href=""> 1 </a>
+		<a href=""> 2 </a>
+		<a href=""> 3 </a>
+		<a href=""> 4 </a>
+		<a href="">>></a>
+	</div>
+	<footer>
+		<p>Hai Phong</p>
+	</footer>
+</body>
+<script type="text/javascript">
+	var array_nameImage = new Array("logo","image2","image3");
+	var arrayLenght = array_nameImage.length;
+	var sum = 0;
+	function prev(){
+		if (sum-1 < 0) {
+			sum = arrayLenght-1;
+		}else{
+			sum --;
+		}
+		changeImage(sum);
+	}
+	function next(){
+		if (sum +1 > arrayLenght-1) {
+			sum = 0;
+			console.log("" + sum);
+
+		}else{
+			sum ++;
+			console.log("" + sum);
+
+		}
+		changeImage(sum);
+	}
+	function changeImage(sum){
+		document.getElementById('image').src = "Ex1_images/"+array_nameImage[sum] +".jpg";
+	}
+
+
+</script>
+</html>
