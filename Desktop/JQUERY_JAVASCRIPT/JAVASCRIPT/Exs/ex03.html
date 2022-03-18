@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="number">
+	<button onclick="checkNumber()">Click</button>
+
+</body>
+<script type="text/javascript">
+	function checkNumber(){
+		var array_number = new Array();
+		var number = document.getElementById('number').value ;
+		if (number <= 2) {
+			console.log("khong co so nguyen to nao");
+		// }else if(number = 2){
+		// 	array_number.push(number);
+		}else if(number > 2){
+			console.log(number);
+			for (var i = 3; i < number; i+=1) {
+				for (var j=2; j < number -1; j++) {
+					if (i%j !=0) {
+						array_number.push(i);
+					}
+				}
+			}
+		}else{
+
+		}
+		console.log(array_number);
+
+	}
+	function isPrime(){
+		
+	}
+
+
+	
+</script>
+</html>

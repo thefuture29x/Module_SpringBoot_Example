@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="number">
+	<button onclick="checkNumber()">Click</button>
+
+</body>
+<script type="text/javascript">
+	function checkNumber(){
+		var sum = 0;
+		var i = 0;
+		var number = document.getElementById('number').value ;
+		while(i <= number){
+			if (i%2 ==0) {
+				sum = sum + i;
+			}
+			i++;
+		}
+		console.log(sum);
+		
+	}
+	
+</script>
+</html>

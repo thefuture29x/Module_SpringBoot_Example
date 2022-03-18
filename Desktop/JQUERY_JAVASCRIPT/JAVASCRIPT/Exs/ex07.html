@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<table align="center" border="1" width="300" height="350">
+		<tr>
+			<td colspan="4">
+				<input type="text" name="" id="number">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="clickButton(7)">7</button>
+			</td>
+			<td>
+				<button onclick="clickButton(8)">8</button>
+			</td>
+			<td>
+				<button onclick="clickButton(9)">9</button>
+			</td>
+			<td>
+				<button onclick="clickButton('c')">AC</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="clickButton(4)">4</button>
+			</td>
+			<td>
+				<button onclick="clickButton(5)">5</button>
+			</td>
+			<td>
+				<button onclick="clickButton(6)">6</button>
+			</td>
+			<td>
+				<button onclick="clickButton('x')">x</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="clickButton(1)">1</button>
+			</td>
+			<td>
+				<button onclick="clickButton(2)">2</button>
+			</td>
+			<td>
+				<button onclick="clickButton(3)">3</button>
+			</td>
+			<td>
+				<button onclick="clickButton('-')">-</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="clickButton(0)">0</button>
+			</td>
+			<td>
+				<button onclick="clickButton('/')">/</button>
+			</td>
+			<td>
+				<button onclick="clickButton('+')">+</button>
+			</td>
+			<td>
+				<button onclick="clickButton('=')">=</button>
+			</td>
+		</tr>
+
+	</table>
+
+</body>
+<script type="text/javascript">
+	var array = new Array("","","");
+	var value_input = document.getElementById('number');
+	function clickButton(value){
+		if (typeof(value) == 'number') {
+			if (array[1] == "") {
+				array[0] = "" + array[0] + value;
+				value_input.value = array[0];
+			}else{
+				array[2] = "" + array[2] + value;
+				value_input.value = array[2];
+			}
+		}else if (typeof(value) == 'string'){
+			switch(value){
+				case '+':
+					value_input.value = '+';
+					array[1] = value;
+					break;
+				case '-':
+					value_input.value = '-';
+					array[1] = value;
+					break;
+				case 'x':
+					value_input.value = 'x';
+					array[1] = value;
+					break;
+				case '/':
+					value_input.value = '/';
+					array[1] = value;
+					break;
+				case '=':
+					action();
+					break;
+				case 'c':
+					clear();
+					break;
+			}
+		}
+		console.log(array);
+		
+	}
+	function action(){
+		var value_result = 0;
+		switch(array[1]){
+			case '+':
+				value_result = parseInt(array[0]) + parseInt(array[2]);
+				break;
+			case '-':
+				value_result = parseInt(array[0]) - parseInt(array[2]);
+				break;
+			case 'x':
+				value_result = parseInt(array[0]) * parseInt(array[2]);
+				break;
+			case '/':
+				value_result = parseInt(array[0]) / parseInt(array[2]);
+				break;
+		}
+		value_input.value = value_result;
+		array[0] = value_result;
+		array[1] = '';
+		array[2] = '';
+		console.log(array);
+	}
+	function clear(){
+		array = new Array('','','');
+		value_input.value = '';
+	}
+	
+</script>
+</html>

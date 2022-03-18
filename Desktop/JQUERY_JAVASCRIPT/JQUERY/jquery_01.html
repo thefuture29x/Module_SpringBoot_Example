@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<p class="tag_p">This text for test jquery</p>
+		<div class="tag_div"style="height:100px;width:300px;border:1px solid black;background-color:pink;margin-bottom: 50px;">
+
+		This is some text in the div.
+		<p>This is a paragraph in the div.</p>
+		<p>This is another paragraph in the div.</p>
+		</div>
+
+		<input type="text" name="">
+		<button id="tag_button">Test Jquery</button>
+		<p>List 1:</p>
+		<ul>
+		  <li>Coffee</li>
+		  <li>Milk</li>
+		  <li>Tea</li>
+		</ul>
+		<p><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></p>
+		<div style="background:pink;height:100px;width:100px;position:absolute;"></div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var i = 0;
+	$(document).ready(function(){
+		$("button").click(function(){
+			// $("p").hide();
+			// $("ul li:first-child").hide();
+			// $("[href]").hide();
+			// $(":button").hide();
+			// $("ul li:odd").css("background-color", "pink");
+			// $("div").animate({left:'150px'});
+			// $("div").animate({left:'300px'});
+			// $("div").animate({left:'450px'});
+			// $("div").animate({left:'600px'});
+			// $("div").animate({left:'450px'});
+			// $("div").animate({left:'300px'});
+			// $("div").animate({left:'150px'});
+			// $("div").animate({left:'0px'});
+			// $("div").animate(changeWidth());
+			
+			// function changeWidth(){
+				
+				setInterval(function(){
+					if (i<=3) {
+						i++;
+					} 
+					return $("div").animate({margin-left:'1000px'});
+				},1000);
+				// return i;
+			// };
+				
+			
+
+			// $(".tag_div").remove();
+			// $(".tag_div").empty();
+			// $(".tag_div").append("<p>This is a paragraph in the div.</p>");
+			// 
+			// 
+		});
+		// $(window).resize(function(){
+		// 	$(window).height(function(){
+		// 		$("div").css("background-color", "red");
+		// 		$("ul li:first-child").text(window.innerHeight+" x "+ window.innerWidth);
+		// 	});
+		// });
+
+	});
+
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

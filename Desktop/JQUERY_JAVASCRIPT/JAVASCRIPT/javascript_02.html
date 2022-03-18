@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<style >
+	.error{
+		display: hidden;
+	}
+</style>
+<body>
+	<div>
+		<p>Usename: </p>
+		<input type="text" name="" id="username">
+		<p id="alert_username"></p>
+	</div>
+	<div>
+		<p>Password: </p>
+		<input type="password" name="" id="password">
+		<p id="alert_password"></p>
+	</div>
+	<button onclick="getObject()">Submit</button>
+</body>
+<script type="text/javascript">
+	function validation(){
+		var username = document.getElementById('username').value;
+		var password = document.getElementById('password').value;
+		if (username == "") {
+			document.getElementById('alert_username').innerHTML = "Username must be filled out";
+
+		}else{
+			document.getElementById('alert_username').className = "error";
+		}
+		if (password == "") {
+			document.getElementById('alert_password').innerHTML = "Password must be filled out";
+
+		}
+
+		
+	}
+
+	function getObject(){
+		var person = new Object();
+		person.firstname = "nguyen";
+		person.lastname = "van a";
+		person.email = "123@gmail.com";
+		person.add = "1/2/hanoi";
+		person.fullname = function(){
+			return "hai phong";
+		}
+
+		const person2 = {
+		  firstName: "Hai",
+		  lastName : "Phong",
+		  fullName : function() {
+		    return this.firstName + " " + this.lastName;
+		  }
+		};
+
+		console.log(person.firstname);
+		console.log(person.email);
+		console.log(person.add);
+		console.log(person.fullname());
+		console.log(person2.fullName());
+
+
+	}
+
+</script>
+</html>

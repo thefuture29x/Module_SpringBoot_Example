@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Bai 1: Kiem tra so chan le</p>
+	<input type="text" name="" id="number1">
+	<button onclick="Bai1()">Click</button>
+	<p>Bai 2: In ra so tu nhien tu 1 den so nhap vao</p>
+	<input type="text" name="" id="number2">
+	<button onclick="Bai2()">Click</button>
+	<p>Bai 3: Kiem tra cac so nguyen to den so nhap vao</p>
+	<input type="text" name="" id="number3">
+	<button onclick="Bai3()">Click</button>
+	<p>Bai 4: Tong so chan tu 1 -> so nhap vao</p>
+	<input type="text" name="" id="number4">
+	<button onclick="Bai4()">Click</button>
+	<p>Bai 5: Tong cua so chan va so le trong mot mang</p>
+	<button onclick="Bai5()">Click</button>
+	<p>Bai 6: Kiem tra email hop le</p>
+	<input type="text" name="" id="number6">
+	<button onclick="Bai6()">Click</button>
+</body>
+<script type="text/javascript">
+	function Bai1(){
+		var number = document.getElementById('number1').value ;
+		if (number>0) {
+			console.log("So "+number+" la so nguyen duong");
+		}else if(number==0){
+			console.log("So 0 khong la so nguyen duong cung ko la so nguyen am ");
+		}else{
+			console.log("So "+number+" la so nguyen am");
+		}
+	}
+	function Bai2(){
+		var number = document.getElementById('number2').value ;
+		for (var i = 0; i < number; i++) {
+			console.log(i+1);
+		}
+	}
+	function Bai3(){
+		var array_number = new Array();
+		var number = document.getElementById('number3').value ;
+		if (number <= 2) {
+			console.log("khong co so nguyen to nao");
+		// }else if(number = 2){
+		// 	array_number.push(number);
+		}else if(number > 2){
+			console.log(number);
+			for (var i = 3; i <= number; i+=1) {
+				if(isPrime(i)){
+					array_number.push(i);
+				}
+
+			}
+		}else{
+
+		}
+		console.log(array_number);
+
+	}
+	function isPrime(number){
+		for (var j=2; j < number; j++) {
+			if (number%j ==0) {
+				return false;
+			}
+		}
+		return true;
+	}
+	function Bai4(){
+		var sum = 0;
+		var i = 0;
+		var number = document.getElementById('number4').value ;
+		while(i <= number){
+			if (i%2 ==0) {
+				sum = sum + i;
+			}
+			i++;
+		}
+		console.log(sum);
+		
+	}
+	function Bai5(){
+		var sum1 = 0;
+		var sum2 = 0
+		var array_number = new Array(1,2,3,4,6,9,8,3);
+		for (var i = 0; i < array_number.length; i++) {
+			if (array_number[i]%2 !=0) {
+				sum1 = sum1 + array_number[i];
+			}else{
+				sum2 = sum2 + array_number[i];
+			}
+		}
+			console.log("Tong cac so le: " + sum1);
+			console.log("Tong cac so chan: " + sum2);
+	}
+	function Bai6(){
+		var email = document.getElementById('number6').value ;
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+		    console.log("email is validation");
+		}else{
+		    console.log("email is not validation");
+		}
+	}
+
+</script>
+</html>

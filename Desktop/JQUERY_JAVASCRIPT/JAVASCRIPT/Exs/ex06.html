@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="number">
+	<button onclick="ValidateEmail()">Click</button>
+
+</body>
+<script type="text/javascript">
+	function ValidateEmail(){
+		var email = document.getElementById('number').value ;
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+		    console.log("email is validation");
+		}else{
+		    console.log("email is not validation");
+		}
+	}
+	
+</script>
+</html>

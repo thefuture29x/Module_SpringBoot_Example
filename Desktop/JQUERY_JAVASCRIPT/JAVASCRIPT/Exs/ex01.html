@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id="number">
+	<button onclick="checkTypeNumber()">Check</button>
+
+</body>
+<script type="text/javascript">
+	function checkTypeNumber(){
+		var number = document.getElementById('number').value ;
+		if (number>0) {
+			console.log("So "+number+" la so nguyen duong");
+		}else if(number==0){
+			console.log("So 0 khong la so nguyen duong cung ko la so nguyen am ");
+		}else{
+			console.log("So "+number+" la so nguyen am");
+		}
+	}
+	
+</script>
+</html>

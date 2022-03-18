@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-right div img{
+  	width: 100%;
+    height: 33%;
+    margin: 5px;
+  }
+  </style>
+</head>
+<body>
+	<div class="container">
+<!-- 		<div class="row">
+			<div class="col-md-4" style="background-color: pink">1</div>
+			<div class="col-md-4" style="background-color: blue">2</div>
+			<div class="col-md-4" style="background-color: white">
+				<div class="row">
+					<div class="col-md-12">3.1</div>
+					<div class="col-md-12">3.2</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 offset-md-3" style="background-color: pink">1</div>
+			<div class="col-md-3" style="background-color: white">2</div>
+			<div class="col-md-3" style="background-color: black">3</div>
+		</div>
+		<br>
+		<br>
+		<div>
+			<table class="table table-hove">
+				<thead class="thead-dark">
+					<tr>
+						<td>thead 1</td>
+						<td>thead 2</td>
+						<td>thead 3</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="table-primary">
+						<td>row 1 1</td>
+						<td>row 1 2</td>
+						<td>row 1 3</td>
+					</tr>
+					<tr class="table-success">
+						<td>row 2 1</td>
+						<td>row 2 2</td>
+						<td>row 2 3</td>
+					</tr>
+					<tr class="table-danger">
+						<td>row 3 1</td>
+						<td>row 3 2</td>
+						<td>row 3 3</td>
+					</tr>
+					<tr class="table-warning">
+						<td>row 4 1</td>
+						<td>row 4 2</td>
+						<td>row 4 3</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2</td>
+						<td>2</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>2</td>
+						<td>2</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> -->
+		<!-- <div>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="text" name="" class="form-control">
+					<p>Check email</p>
+				</div>
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="password" name="" class="form-control">
+					<p>Check pass</p>
+				</div>
+				<button type="Submit" class="btn btn-primary">Submit</button>
+				
+			</form>
+		</div> -->
+		<br>
+		<hr>
+		<br>
+		<!-- <div class="row">
+			<form class="form-inline">
+				<label>Email: </label>
+				<input type="text" name="" class="form-control">
+				<label>Password: </label>
+				<input type="password" name="" class="form-control">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div> -->
+		<!-- <form action="/action_page.php" class="was-validated">
+		    <div class="form-group">
+		      <label for="uname">Username:</label>
+		      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+		      <div class="valid-feedback">Valid.</div>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    <div class="form-group">
+		      <label for="pwd">Password:</label>
+		      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+		      <div class="valid-feedback">Valid.</div>
+		      <div class="invalid-feedback">Please fill out this field.</div>
+		    </div>
+		    <div class="form-group form-check">
+		      <label class="form-check-label">
+		        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+		        <div class="valid-feedback">Valid.</div>
+		        <div class="invalid-feedback">Check this checkbox to continue.</div>
+		      </label>
+		    </div>
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+		
+	</div> -->
+	
+	
+	<div class="row">
+		<div class="col-md-8">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+
+			  <!-- Indicators -->
+			  <ul class="carousel-indicators">
+			    <li data-target="#demo" data-slide-to="0" class="active"></li>
+			    <li data-target="#demo" data-slide-to="1"></li>
+			    <li data-target="#demo" data-slide-to="2"></li>
+			  </ul>
+			  
+			  <!-- The slideshow -->
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="logo.jpg">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="logo.jpg">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="logo.jpg">
+			    </div>
+			  </div>
+			  
+			  <!-- Left and right controls -->
+			  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+			    <span class="carousel-control-prev-icon"></span>
+			  </a>
+			  <a class="carousel-control-next" href="#demo" data-slide="next">
+			    <span class="carousel-control-next-icon"></span>
+			  </a>
+			</div>
+		</div>
+		<div class="col-md-4 carousel-right">
+			<div class="col-md-12">
+				<img src="logo.jpg">
+			</div>
+			<div class="col-md-12">
+				<img src="logo.jpg">
+			</div>
+			<div class="col-md-12">
+				<img src="logo.jpg">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

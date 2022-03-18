@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// confirm("Hello");
+		// prompt("ban co muon hoc html ko ?");
+		// var array1 = new Array(1,2,3);
+		// var array2 = new Array["1","2","3"];
+		// console.log("valueOf " + array1.valueOf());
+		// console.log("push " + array1.push("4"));
+		// console.log("pop" + array1.pop());
+		// console.log("shift" + array1.shift());
+		// console.log("unshift" + array1.unshift());
+	</script>
+</head>
+<body>
+	
+	<button onclick="document.getElementById('demo1').innerHTML = 'Hello' ">Click 1</button>
+	<div id="demo1"></div>
+	<button onclick="demo2()">Click 2</button>
+	<div id="demo2"></div>
+	<button ondblclick="document.getElementById('demo3').innerHTML = 'Haloha' " >Double click</button>
+	<div id="demo3"></div>
+	<button onmouseover="document.getElementById('demo4').innerHTML = 'onmouseover'">onmouseover</button>
+	<div id="demo4"></div>
+	<button onmouseout="document.getElementById('demo5').innerHTML = 'onmouseout'">onmouseout</button>
+	<div id="demo5"></div>
+</body>
+<script type="text/javascript">
+	function demo2(){
+		document.getElementById('demo2').innerHTML = "Halo ";
+	}
+	
+</script>
+</html>
